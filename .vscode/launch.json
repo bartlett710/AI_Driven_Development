@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL: (debugCurrentFile)",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.int",
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": true
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native): Wait for attachment",
+            "waitForAttachment": {
+                "any": {}
+            }
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native): remote",
+            "program": "<insert-program-name-here>",
+            "remoteDebug": {
+                "machine": "Please enter the name or IP address of the machine runing cobdebugremote.",
+                "port": 0
+            },
+            "stopOnEntry": true
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native)",
+            "program": "${workspaceFolder}/<insert-program-name-here>",
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": true
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native): Enterprise Server",
+            "enterpriseServer": {
+                "serverName": "Please enter the name of the server to debug.",
+                "serverAddress": "Please enter the address of the 'mfcs-mp' or 'soap' listener for the server. eg tcp:127.0.0.1:<nnn>."
+            }
+        },
+        {
+            "type": "cobol",
+            "request": "attach",
+            "name": "COBOL (native): Attach to process",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native): Remote-SSH",
+            "program": "<insert-program-name-here>",
+            "env": {
+                "TERM": "xterm",
+                "DISPLAY": "<hostname-or-ip:D.S>"
+            },
+            "stopOnEntry": true,
+            "console": "externalTerminal"
+        },
+        {
+            "type": "cobol",
+            "request": "launch",
+            "name": "COBOL (native): 64-bit",
+            "program": "${workspaceFolder}/<insert-program-name-here>",
+            "cwd": "${workspaceFolder}",
+            "is64Bit": true,
+            "stopOnEntry": true
+        },
+        {
+            "type": "idl",
+            "name": "Launch IDL",
+            "request": "launch"
+        }
+    ]
+}
